@@ -3,10 +3,14 @@ import SearchBar from './SearchBar';
 
 
 class App extends React.Component {
+ onTextSumbit = (text) => {
+
+ };
+
   render() {
     return(
       <div className="ui container">
-       <SearchBar/>
+       <SearchBar onTextSumbit={this.onTextSumbit}/>
       </div>
     )
   }
