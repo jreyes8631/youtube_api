@@ -21,7 +21,7 @@ class App extends React.Component {
     return(
       <div className="ui container">
        <SearchBar onFormSumbit={this.onTextSumbit}/>
-       <VideoList />
+       <VideoList videos={this.state.videos} />
        </div>
     )
   }
