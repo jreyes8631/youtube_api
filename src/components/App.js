@@ -17,11 +17,15 @@ class App extends React.Component {
    this.setState({ videos: response.data.items})
  };
 
+ onVideoSelect = async (video) => {
+   console.log('from the app!', video)
+ }
+
   render() {
     return(
       <div className="ui container">
        <SearchBar onFormSumbit={this.onTextSumbit}/>
-       <VideoList videos={this.state.videos} />
+       <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos} />
        </div>
     )
   }
