@@ -5,7 +5,7 @@ import VideoList from './VideoList'
 
 
 class App extends React.Component {
-  state = { videos: [] };
+  state = { videos: [], selectedVideo: null };
 
  onTextSumbit = async (text) => {
   const response = await youtube.get('/search', { 
