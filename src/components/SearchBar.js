@@ -20,7 +20,9 @@ class SearchBar extends React.Component {
                    <label>
                      Video Search
                    </label>
-                   <input type="text" 
+                   <input 
+                   placeHolder={this.state.text}
+                   type="text" 
                    value={this.state.text}
                    onChange={this.onInputChange}
                    />

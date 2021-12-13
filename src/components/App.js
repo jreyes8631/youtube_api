@@ -8,6 +8,10 @@ import VideoDetail from './videoDetail'
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
 
+  componentDidMount(){
+    this.onTextSumbit('whales')
+  }
+
  onTextSumbit = async (text) => {
   const response = await youtube.get('/search', { 
      params: {
@@ -20,8 +24,6 @@ class App extends React.Component {
      selectedVideo: response.data.items[0]
     })
  };
-
- 
 
  onVideoSelect = async (video) => {
    this.setState({ selectedVideo: video})
